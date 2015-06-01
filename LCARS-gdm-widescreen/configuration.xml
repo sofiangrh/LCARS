@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE greeter SYSTEM "greeter.dtd">
+<greeter>
+
+    <!--Background -->
+    <item type="pixmap">
+	    <normal file="LCARS-gdm-1280x800.png"/>
+	    <pos x="0" y="0" width="100%" height="100%"/>
+    </item>
+
+    <!--Host -->
+    <item type="label">
+	    <normal color="#000000" font="Sans Bold 10"/>
+	    <pos x="140" y="370" anchor="ne" width="box" height="box"/>
+	    <!-- Stock label for: Welcome to %h-->
+	    <text>%h</text>
+    </item>
+
+    <!--Clock -->
+    <item type="label" id="clock">
+	    <normal color="#000000" font="Sans Bold 10"/>
+	    <pos x="140" y="270" anchor="se" width="box" height="box"/>
+	    <text>%c</text>
+    </item>
+
+    <!--Login prompt text -->
+    <item type="label" id="pam-prompt">
+	    <pos anchor="n" x="57%" y="73%"/>			
+	    <normal color="#9999ff" font="Sans Bold 14"/>
+	    <!-- Stock label for: Username: -->
+	    <stock type="username-label"/>
+    </item>
+
+    <!--Login entry field --> 
+    <item type="entry" id="user-pw-entry">
+	    <normal color="#333333" font="Sans Bold 14"/>
+	    <pos anchor="n" x="57%" y="78%" height="22" width="30%"/>
+    </item> 
+
+    <!-- CAPS warning -->
+    <item type="rect" id="caps-lock-warning">
+	    <normal color="#000000" alpha="0"/>
+	    <pos anchor="n" x="57%" y="82%" width="box" height="box"/>
+	    <box orientation="vertical" min-width="380" xpadding="10" ypadding="0" spacing="0">
+		    <item type="label">
+			    <normal color="#ff0000" font="Sans Bold 12"/>
+			    <pos x="50%" anchor="n"/>
+			    <!-- Stock label for: You've got capslock on! -->
+			    <stock type="caps-lock-warning"/>
+		    </item>
+	    </box>
+    </item> 
+	
+
+    <!--Pam error -->
+    <item type="label" id="pam-error">
+	    <pos anchor="c" x="50%" y="69%" width="200" height="200"/>
+	    <normal color="#01d8e3" font="Sans 10"/>
+	    <text></text>
+    </item>
+
+
+
+    <!-- Session/Language/Reboot/Shutdown Buttons -->
+    <!-- Button Container object -->
+    <item type="rect">
+	    <pos anchor="sw" x="200" y="99%" width="1040" height="80" />
+	    <normal color="#000000" alpha="0" />
+	    <box spacing="10" orientation="horizontal">
+	    
+
+            <!-- session button -->
+			<item type="rect" id="session_button" button="true">
+				<pos anchor="nw" width="250" height="70"/>
+				<box orientation="vertical" spacing="5">
+
+					<!-- button image -->
+					<item type="pixmap">
+						<normal file="button_session_normal.png"/>
+						<prelight file="button_session_prelight.png"/>
+						<active file="button_session_prelight.png"/>
+						<pos x="50%" anchor="n"/>
+					</item>				</box>
+			</item>
+
+
+            <!-- language button -->
+			<item type="rect" id="language_button" button="true">
+				<pos anchor="nw" width="250" height="70"/>
+				<box orientation="vertical" spacing="5">
+
+					<!-- button image -->
+					<item type="pixmap">
+						<normal file="button_language_normal.png"/>
+						<prelight file="button_language_prelight.png"/>
+						<active file="button_language_prelight.png"/>
+						<pos x="50%" anchor="n"/>
+					</item>				</box>
+			</item>
+
+            <!-- system button -->
+			<item type="rect" id="system_button" button="true">
+				<pos anchor="nw" width="250" height="70"/>
+				<box orientation="vertical" spacing="5">
+
+					<!-- button image -->
+					<item type="pixmap">
+						<normal file="button_system_normal.png"/>
+						<prelight file="button_system_prelight.png"/>
+						<active file="button_system_prelight.png"/>
+						<pos x="50%" anchor="n"/>
+					</item>				</box>
+			</item>
+	        
+	        <!-- halt button -->
+			<item type="rect" id="halt_button" button="true">
+				<pos anchor="nw" width="250" height="70"/>
+				<box orientation="vertical" spacing="5">
+
+					<!-- button image -->
+					<item type="pixmap">
+						<normal file="button_shutdown_normal.png"/>
+						<prelight file="button_shutdown_prelight.png"/>
+						<active file="button_shutdown_prelight.png"/>
+						<pos x="50%" anchor="n"/>
+					</item>				</box>
+			</item>
+		
+	    </box>
+    </item>
+</greeter>

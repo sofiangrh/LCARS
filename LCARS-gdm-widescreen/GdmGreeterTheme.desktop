@@ -1,0 +1,8 @@
+[GdmGreeterTheme]
+Encoding=UTF-8
+Greeter=configuration.xml
+Name=LCARS Login
+Description=Star Trek LCARS GDM theme
+Author=Chris I-B (ve4cib@gmail.com)
+Copyright=GPL
+Screenshot=screenshot.png
